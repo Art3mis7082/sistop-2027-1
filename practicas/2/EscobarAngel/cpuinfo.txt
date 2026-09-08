@@ -1,0 +1,10 @@
+﻿
+
+Name                      : Intel(R) Core(TM) 7 240H
+Manufacturer              : GenuineIntel
+NumberOfCores             : 10
+NumberOfLogicalProcessors : 16
+
+
+
+
