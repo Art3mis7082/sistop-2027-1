@@ -1,0 +1,5 @@
+archivo = open("salida.txt", "w")
+archivo.write("Este archivo fue geneado automaticamente\n")
+archivo.write("No debería estar en el repositorio\n")
+archivo.close()
+print("Archivo generado exitosamente")
