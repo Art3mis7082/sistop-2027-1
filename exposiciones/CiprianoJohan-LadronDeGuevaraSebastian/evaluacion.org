@@ -1,0 +1,74 @@
+#+title: Evaluación de la exposición
+#+author: Gunnar Wolf
+
+* Unikernels
+
+- Tema presentado por :: Johan Cipriano y Sebastián Ladrón de Guevara
+- Calificación global :: 9.31
+
+|------------------------+------+--------------------+------+---------|
+| Evaluación  compañeros | Peso | Evaluación docente | Peso | *Total* |
+|------------------------+------+--------------------+------+---------|
+|                    9.8 |  0.3 |                9.1 |  0.7 |    9.31 |
+|------------------------+------+--------------------+------+---------|
+#+TBLFM: @2$5=$1*$2+$3*$4;f-2
+
+* Evaluación grupal
+
+|              | 1 | 2 | 3 | 4 | 5 |  Total |
+|--------------+---+---+---+---+---+--------|
+| Originalidad | 0 | 0 | 0 | 0 | 4 | 100.00 |
+| Nivel        | 0 | 0 | 0 | 1 | 3 |  95.00 |
+| Relevancia   | 0 | 0 | 0 | 1 | 3 |  95.00 |
+| Claridad     | 0 | 0 | 0 | 0 | 4 | 100.00 |
+| Presencia    | 0 | 0 | 0 | 0 | 4 | 100.00 |
+|--------------+---+---+---+---+---+--------|
+|              |   |   |   |   |   |  98.00 |
+#+TBLFM: @2$7..@6$7=10 * (0.2*$2 + 0.4*$3 + 0.6*$4 + 0.8*$5 + $6 ) / vsum($2..$6); f-2::@7$7=vmean(@2$7..@6$7); f-2
+
+** Comentarios de los compañeros
+
+- Buena exposición, clara y concisa
+
+* Evaluación por parte del docente
+
+| *Aspecto*                          | *Peso* | *Evaluación* | *Puntos* |
+|------------------------------------+--------+--------------+----------|
+| Contenido técnico y profundidad    |    0.3 |            7 |      2.1 |
+| Fuentes bibliográficas             |   0.15 |           10 |      1.5 |
+| Organización                       |   0.15 |           10 |      1.5 |
+| Comunicación oral y uso del tiempo |   0.25 |           10 |      2.5 |
+| Uso de recursos visuales           |   0.15 |           10 |      1.5 |
+|------------------------------------+--------+--------------+----------|
+| *Global*                           |        |              |     9.10 |
+#+TBLFM: @<<$4..@>>$4=$2*$3::$4=vsum(@<<..@>>);f-2
+
+** Comentarios
+
+- ¡Muy bien por preparar una presenación basada en memes, con elementos
+  atractivos, que llaman la atención del público
+- Se ve que hicieron un buen intento por modular su voz y que no se
+  sintiera demasiado que lo iban leyendo. Sin embargo, el ritmo sigue
+  siendo un poco monótono. Los invito a seguir mejorando este aspecto, pero
+  van por buen camino 😃
+- La música de fondo que le ponen es un buen toque que hace agradable de
+  seguir su ritmo y demuestra que le dedicaron tiempo a la edición. Pero
+  sería mejor si fuera /un poquito/ más bajo, porque a ratos me hizo
+  difícil seguir su presentación.
+
+Yendo a los aspectos técnicos...
+
+- ¿Minutos para el arranque de un sistema operativo completo? Mi
+  computadora portátil arranca en 17 segundos. Mis sistemas
+  “contenedorizados”, en 1–2 segundos.
+- Hackeo de fallas en aplicación, en vez de fallas que te “sueltan” al
+  shell
+- Hay un punto muy importante que omitieron: El desarrollo de aplicaciones
+  que puedan /compilarse/ en imágenes unikernel requiere de adecuaciones
+  importantes.
+  - El modelo, hasta donde entiendo, rompe con la compatibilidad con
+    sistemas POSIX
+  - No es posible preparar de esta manera aplicaciones escritas utilizando
+    los /bloques de construcción/ que tenemos disponibles. Ese
+    diferenciador por sí sólo ha significado la vida o la muerte para
+    plataformas de hardware y software completas con amplios méritos...
